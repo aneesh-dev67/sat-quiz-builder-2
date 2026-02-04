@@ -1,0 +1,41 @@
+{
+  "set_name": "Sample SAT Math Questions",
+  "questions": [
+    {
+      "id": 1,
+      "question": "If 3x + 7 = 22, what is the value of x?",
+      "choices": {
+        "A": "3",
+        "B": "5",
+        "C": "7",
+        "D": "15"
+      },
+      "correct_answer": "B",
+      "explanation": "To solve for x, subtract 7 from both sides: 3x = 15. Then divide both sides by 3: x = 5."
+    },
+    {
+      "id": 2,
+      "question": "What is 20% of 150?",
+      "choices": {
+        "A": "20",
+        "B": "25",
+        "C": "30",
+        "D": "35"
+      },
+      "correct_answer": "C",
+      "explanation": "To find 20% of 150, multiply 150 by 0.20: 150 × 0.20 = 30."
+    },
+    {
+      "id": 3,
+      "question": "A rectangle has a length of 12 cm and a width of 5 cm. What is its perimeter?",
+      "choices": {
+        "A": "17 cm",
+        "B": "24 cm",
+        "C": "34 cm",
+        "D": "60 cm"
+      },
+      "correct_answer": "C",
+      "explanation": "The perimeter of a rectangle is 2(length + width). So: 2(12 + 5) = 2(17) = 34 cm."
+    }
+  ]
+}

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SAT Quiz Builder</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>📚 SAT Quiz Builder</h1>
+            <p class="subtitle">Create custom quizzes from your question banks</p>
+        </header>
+
+        <!-- Question Set Selection -->
+        <div id="setup-screen" class="screen active">
+            <div class="card">
+                <h2>Select Question Sets</h2>
+                <p class="instruction">Choose which question banks to include in your quiz</p>
+                
+                <div id="question-sets-list" class="question-sets">
+                    <!-- Dynamically loaded question sets will appear here -->
+                </div>
+
+                <div class="selected-info">
+                    <span id="total-questions-count">0 questions selected</span>
+                </div>
+
+                <button id="start-quiz-btn" class="btn btn-primary" disabled>
+                    Start Quiz
+                </button>
+            </div>
+        </div>
+
+        <!-- Quiz Screen -->
+        <div id="quiz-screen" class="screen">
+            <div class="quiz-header">
+                <div class="progress-bar">
+                    <div id="progress-fill" class="progress-fill"></div>
+                </div>
+                <div class="quiz-info">
+                    <span id="question-counter">Question 1 of 10</span>
+                </div>
+            </div>
+
+            <div class="card question-card">
+                <div id="question-content">
+                    <h3 id="question-text"></h3>
+                    <div id="choices-container" class="choices">
+                        <!-- Choices will be dynamically loaded -->
+                    </div>
+                </div>
+
+                <div class="quiz-controls">
+                    <button id="prev-btn" class="btn btn-secondary" disabled>Previous</button>
+                    <button id="next-btn" class="btn btn-primary">Next</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Results Screen -->
+        <div id="results-screen" class="screen">
+            <div class="card">
+                <h2>📊 Quiz Results</h2>
+                
+                <div class="score-summary">
+                    <div class="score-circle">
+                        <span id="score-percentage">0%</span>
+                    </div>
+                    <p id="score-text">You got <span id="correct-count">0</span> out of <span id="total-count">0</span> correct</p>
+                </div>
+
+                <div id="results-details">
+                    <!-- Detailed results will be shown here -->
+                </div>
+
+                <div class="results-actions">
+                    <button id="retry-btn" class="btn btn-primary">Take Another Quiz</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>

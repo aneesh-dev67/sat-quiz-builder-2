@@ -1,0 +1,94 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Parse PDF",
+      "type": "shell",
+      "command": "python",
+      "args": [
+        "parser/pdf_parser.py",
+        "${input:pdfFile}",
+        "--set-name",
+        "${input:setName}"
+      ],
+      "problemMatcher": [],
+      "group": {
+        "kind": "build",
+        "isDefault": false
+      },
+      "presentation": {
+        "reveal": "always",
+        "panel": "new"
+      }
+    },
+    {
+      "label": "Open Quiz in Browser",
+      "type": "shell",
+      "command": "open",
+      "args": ["web/index.html"],
+      "windows": {
+        "command": "start",
+        "args": ["web/index.html"]
+      },
+      "linux": {
+        "command": "xdg-open",
+        "args": ["web/index.html"]
+      },
+      "problemMatcher": [],
+      "group": {
+        "kind": "test",
+        "isDefault": true
+      }
+    },
+    {
+      "label": "Install Python Dependencies",
+      "type": "shell",
+      "command": "pip",
+      "args": [
+        "install",
+        "-r",
+        "requirements.txt",
+        "--break-system-packages"
+      ],
+      "problemMatcher": [],
+      "group": "none",
+      "presentation": {
+        "reveal": "always",
+        "panel": "new"
+      }
+    },
+    {
+      "label": "Validate JSON Files",
+      "type": "shell",
+      "command": "python",
+      "args": [
+        "-m",
+        "json.tool",
+        "${file}"
+      ],
+      "problemMatcher": [],
+      "group": "none"
+    },
+    {
+      "label": "Start Live Server",
+      "type": "shell",
+      "command": "echo",
+      "args": ["Use Live Server extension: Right-click index.html > Open with Live Server"],
+      "problemMatcher": []
+    }
+  ],
+  "inputs": [
+    {
+      "id": "pdfFile",
+      "type": "promptString",
+      "description": "Path to PDF file to parse",
+      "default": "questions.pdf"
+    },
+    {
+      "id": "setName",
+      "type": "promptString",
+      "description": "Name for this question set",
+      "default": "SAT Questions"
+    }
+  ]
+}

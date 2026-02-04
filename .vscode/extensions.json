@@ -1,0 +1,25 @@
+{
+  "recommendations": [
+    // Python Development
+    "ms-python.python",
+    "ms-python.vscode-pylance",
+    
+    // Web Development
+    "esbenp.prettier-vscode",
+    "ritwickdey.liveserver",
+    "formulahendry.auto-rename-tag",
+    "formulahendry.auto-close-tag",
+    
+    // Helpful Utilities
+    "christian-kohler.path-intellisense",
+    "streetsidesoftware.code-spell-checker",
+    "aaron-bond.better-comments",
+    "eamodio.gitlens",
+    
+    // JSON Support
+    "ZainChen.json",
+    
+    // Markdown
+    "yzhang.markdown-all-in-one"
+  ]
+}

@@ -1,0 +1,53 @@
+{
+  "folders": [
+    {
+      "path": "."
+    }
+  ],
+  "settings": {
+    "files.exclude": {
+      "**/__pycache__": true,
+      "**/*.pyc": true,
+      "**/.DS_Store": true
+    },
+    "search.exclude": {
+      "**/node_modules": true,
+      "**/__pycache__": true
+    },
+    "files.associations": {
+      "*.json": "jsonc"
+    },
+    "editor.formatOnSave": true,
+    "editor.tabSize": 2,
+    "[python]": {
+      "editor.tabSize": 4,
+      "editor.formatOnSave": true,
+      "editor.defaultFormatter": "ms-python.python"
+    },
+    "[javascript]": {
+      "editor.tabSize": 2,
+      "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[html]": {
+      "editor.tabSize": 2,
+      "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[css]": {
+      "editor.tabSize": 2,
+      "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "emmet.includeLanguages": {
+      "javascript": "javascriptreact"
+    },
+    "liveServer.settings.root": "/web"
+  },
+  "extensions": {
+    "recommendations": [
+      "ms-python.python",
+      "esbenp.prettier-vscode",
+      "ritwickdey.liveserver",
+      "formulahendry.auto-rename-tag",
+      "christian-kohler.path-intellisense"
+    ]
+  }
+}

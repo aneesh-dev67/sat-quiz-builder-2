@@ -1,0 +1,45 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Python: Parse PDF",
+      "type": "python",
+      "request": "launch",
+      "program": "${workspaceFolder}/parser/pdf_parser.py",
+      "console": "integratedTerminal",
+      "args": [
+        "${input:pdfFilePath}",
+        "--set-name",
+        "${input:questionSetName}"
+      ]
+    },
+    {
+      "name": "Python: Debug Current File",
+      "type": "python",
+      "request": "launch",
+      "program": "${file}",
+      "console": "integratedTerminal"
+    },
+    {
+      "name": "Open with Live Server",
+      "type": "chrome",
+      "request": "launch",
+      "url": "http://127.0.0.1:5500/web/index.html",
+      "webRoot": "${workspaceFolder}/web"
+    }
+  ],
+  "inputs": [
+    {
+      "id": "pdfFilePath",
+      "type": "promptString",
+      "description": "Enter PDF file path",
+      "default": "sample.pdf"
+    },
+    {
+      "id": "questionSetName",
+      "type": "promptString",
+      "description": "Enter question set name",
+      "default": "SAT Practice"
+    }
+  ]
+}

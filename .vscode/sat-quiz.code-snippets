@@ -1,0 +1,67 @@
+{
+  "SAT Question Set": {
+    "prefix": "sat-set",
+    "body": [
+      "{",
+      "  \"set_name\": \"${1:Question Set Name}\",",
+      "  \"questions\": [",
+      "    $0",
+      "  ]",
+      "}"
+    ],
+    "description": "Create a new SAT question set"
+  },
+  "SAT Question": {
+    "prefix": "sat-q",
+    "body": [
+      "{",
+      "  \"id\": ${1:1},",
+      "  \"question\": \"${2:Question text here?}\",",
+      "  \"choices\": {",
+      "    \"A\": \"${3:Choice A}\",",
+      "    \"B\": \"${4:Choice B}\",",
+      "    \"C\": \"${5:Choice C}\",",
+      "    \"D\": \"${6:Choice D}\"",
+      "  },",
+      "  \"correct_answer\": \"${7:A}\",",
+      "  \"explanation\": \"${8:Explanation why this is correct}\"",
+      "}$0"
+    ],
+    "description": "Create a new SAT question"
+  },
+  "Multiple SAT Questions": {
+    "prefix": "sat-questions",
+    "body": [
+      "{",
+      "  \"set_name\": \"${1:Question Set Name}\",",
+      "  \"questions\": [",
+      "    {",
+      "      \"id\": 1,",
+      "      \"question\": \"${2:First question?}\",",
+      "      \"choices\": {",
+      "        \"A\": \"${3:Choice A}\",",
+      "        \"B\": \"${4:Choice B}\",",
+      "        \"C\": \"${5:Choice C}\",",
+      "        \"D\": \"${6:Choice D}\"",
+      "      },",
+      "      \"correct_answer\": \"${7:A}\",",
+      "      \"explanation\": \"${8:Explanation}\"",
+      "    },",
+      "    {",
+      "      \"id\": 2,",
+      "      \"question\": \"${9:Second question?}\",",
+      "      \"choices\": {",
+      "        \"A\": \"${10:Choice A}\",",
+      "        \"B\": \"${11:Choice B}\",",
+      "        \"C\": \"${12:Choice C}\",",
+      "        \"D\": \"${13:Choice D}\"",
+      "      },",
+      "      \"correct_answer\": \"${14:B}\",",
+      "      \"explanation\": \"${15:Explanation}\"",
+      "    }$0",
+      "  ]",
+      "}"
+    ],
+    "description": "Create multiple SAT questions"
+  }
+}
